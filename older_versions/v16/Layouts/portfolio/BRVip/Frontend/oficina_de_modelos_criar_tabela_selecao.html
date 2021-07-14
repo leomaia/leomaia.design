@@ -1,0 +1,550 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-br"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="pt-br"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="pt-br"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js lt-ie10" lang="pt-br"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-br"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <title>VIP &gt; Oficina de Modelos &gt; Criar Modelo Final &gt; Seleção de Modelos</title>
+  <meta name="description" content="Sistema de visualização de dados, geração de inferências e modelos de processo">
+
+  <!-- Mobile viewport optimized: h5bp.com/viewport -->
+  <meta name="viewport" content="width=device-width">
+  
+  <link rel="shortcut icon" href="img/favicon.ico" /> 
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+
+  <!-- All JavaScript at the bottom, except this Modernizr build.
+       Modernizr enables HTML5 elements & feature detects for optimal performance. -->
+  <script src="js/libs/modernizr-2.5.3.min.js"></script>
+</head>
+<body>
+
+	<div class="wrapper">
+
+		<header class="header">
+		
+			<h1 class="logo ir"><a href="index.html" title="ir para a tela inicial">VIP</a></h1>
+			
+			<nav class="menuPrincipal">
+				<ul class="menu">
+					<li><a href="index.html">Projetos</a>
+						<ul class="subMenu">
+							<li><a href="index.html" title="Listar Projetos">Listar</a></li>
+							<li><a href="novo_projeto.html" title="Criar um Projeto Novo">Novo Projeto</a></li>
+							<li><a href="" title="Importar Projeto">Importar</a></li>
+						</ul>
+					</li>
+					<li class="selected"><a href="oficina_de_modelos.html">Oficina de Modelos</a>
+						<ul class="subMenu">
+							<li><a href="oficina_de_modelos_modelos_criados.html" title="Listar Modelos Finais">Listar</a></li>
+							<li><a href="oficina_de_modelos_criar.html" title="Criar Modelo Final">Novo Modelo Final</a></li>
+							<li><a href="" title="Importar Modelo Final">Importar</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav><!-- fim de .menuPrincipal -->
+			
+			<div class="linksComplementares">
+				<ul>
+					<li><a href="" title="Configurações">Configurações</a> &nbsp;|&nbsp;&nbsp;</li>
+					<li><a href="" title="Admin">Admin</a>&nbsp;|&nbsp;&nbsp;</li>
+					<li class="ajuda" title="Ajuda">Ajuda</li>
+				</ul>
+			</div><!-- fim de .linksComplementares -->
+			
+			<div class="logoPetrobras ir">	Petrobras</div>
+
+			<a href="" title="Sair do Sistema" class="sair">Sair</a>
+		
+		</header><!-- fim de .header -->
+	  
+		<div role="main" class="conteudo oficinaModelos">
+		<!-- nessa div eu conjugo classes que me ajudam a hierarquizar o conteúdo para fazer modificações nos estilos de acordo com a seção. a classe .conteudo é fixa e o restante é variável -->
+		  
+			<header class="headerConteudo">
+				<h2 class="titulo">Oficina de Modelos</h2>
+			</header><!-- fim de .headerConteudo -->
+			
+			<div class="miolo">
+			
+				<section class="principal">
+					<header class="headerSecao">
+						<h3 class="tituloPrincipal clearfix">Criar Modelo Final > Seleção de Modelos</h3>
+					</header><!-- fim de .headerSecao -->
+					
+					<div class="preTabela clearfix">
+						<div class="left">
+							<label>Selecionar modelos de</label>
+							<select>
+								<option>Todos os Projetos</option>
+								<option>Projeto XPTO KXWZ</option>
+								<option>Projeto OPQRTS</option>
+								<option>Projeto UYTK</option>
+							</select>
+						</div><!-- fim de .left -->
+						
+						<div class="right">
+							<a href="javascript:history.go(-1)"><input type="button" value="Salvar Seleção" /></a>
+							
+							<a href="javascript:history.go(-1)"><input type="button" value="Cancelar" class="botaoSecundario" /></a>
+							<!-- tag <a> apenas para navegação na interface/protótipo -->
+						</div><!-- fim de .right -->
+					</div><!-- fim de .preTabela -->
+					
+					<table class="tabelaPadrao tabelaSelecaoModelos">
+						<tr>
+							<th scope="col"></th>
+							<th scope="col">T01TO_POC3_INF_E_XP</th>
+							<th scope="col">T02TOPO_C3_INF_E_XP</th>
+							<th scope="col">GLPC2_IN_F_EXP</th>
+							<th scope="col">IC5_NC5_I_NF</th>
+							<th scope="col">LT-26</th>
+							<th scope="col">PDI-46-43_EXP</th>
+							<th scope="col">PIC-43_B_MV_EXP</th>
+						</tr>
+						<tr>
+							<th scope="row" class="thHorizontal">FIC-09_SP_EXP</th>
+							<td>
+								<a href="" title="Selecionar outro modelo">Modelo ERT</a>
+							</td>
+							<td>
+								<a href="#modalSelecaoModelos" name="modal" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row" class="thHorizontal">FIC-08_SP_SP</th>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row" class="thHorizontal">FIC-07_SP</th>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="Selecionar outro modelo">Modelo TYU</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row" class="thHorizontal">PIC-20_SP</th>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row" class="thHorizontal">PIC-43_B_SP</th>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="Selecionar outro modelo">Modelo DRG</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row" class="thHorizontal">TIC-41_CM_SP</th>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="Selecionar outro modelo">Modelo BNM</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row" class="thHorizontal">TIC-37_CM2_SP</th>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row" class="thHorizontal">FIC-15_SP</th>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="Selecionar outro modelo">Modelo BFW</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row" class="thHorizontal">TIC_48_SP</th>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+							<td>
+								<a href="" title="selecionar modelo">
+									<img src="img/ico16_selecionar.png" alt="Selecionar Modelo" class="selecionarModelo">
+								</a>
+							</td>
+						</tr>
+					</table>
+					
+				</section><!-- fim de .principal -->
+						
+			</div><!-- fim de .miolo -->
+		</div><!-- fim de .conteudo -->
+		
+		<section class="graficos">
+			<div class="barraGraficos">
+				<div class="botaoGraficos">
+					<img src="img/ico_painel_graficos.png" alt="Expandir painel de gráficos" class="icone">
+					<div class="tooltipGrafico">
+						<span>Expandir painel<br />
+						de gráficos</span>
+						<!-- Mudar o texto para "Retrair" quando o gráfico estiver expandido -->
+					</div><!-- fim de .tooltipGrafico -->
+				</div><!-- fim de .botaoGraficos -->
+			</div><!-- fim de .barraGraficos -->
+
+			<div class="painelGraficos">
+				<div class="painelGraficosConteudo">
+
+				</div><!-- fim de .painelGraficosConteudo -->
+			</div><!-- fim de .painelGraficos -->			
+		</section><!-- fim de .graficos -->
+		
+	</div><!-- fim de .wrapper -->
+	
+	<!--! MODAIS -->
+
+	<div id="modalSelecaoModelos" class="modal selecaoModelos">
+		<a href="#" class="fechar" title="Fechar">Fechar</a><br />
+		<h3 class="titulo">Selecionar um modelo para <span class="nomeVariavel">FIC-09_EXP</span> x <span class="nomeVariavel">T01TOP0 C3_INF_E_XP</span></h3>
+		
+		<div class="camposSelecao">
+			<p>
+				<label>Projeto</label>
+				<select>
+					<option>Projeto XPTO KXWZ</option>
+					<option>Projeto XPTO KXWZ</option>
+					<option>Projeto XPTO KXWZ</option>
+				</select>
+			</p>
+			
+			<p>
+				<label>Cenário</label>
+				<select>
+					<option>Cenário ABC</option>
+					<option>Cenário DEF</option>
+					<option>Cenário GHI</option>
+					<option>Cenário JKL</option>
+				</select>
+			</p>
+			
+			<p>
+				<label>Modelo</label>
+				<select>
+					<option>Modelo 1</option>
+					<option>Modelo 2</option>
+					<option>Modelo 3</option>
+					<option>Modelo 4</option>
+					<option>Modelo 5</option>
+				</select>
+			</p>
+			
+			<p>
+				<label>Nota</label>
+				<select class="nota">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+				</select>
+			</p>
+		</div><!-- fim de .camposSelecao -->
+		
+		<div class="botoes">
+			<input type="submit" value="Salvar" class="discard" />
+			<input type="submit" value="Cancelar" class="botaoSecundario discard" />
+		</div><!--! fim de .botoes -->
+		
+	</div><!--! fim de .modal -->
+
+	<!-- Máscara para cobrir a tela -->
+	<div id="mask"></div>
+
+  <!-- JavaScript at the bottom for fast page loading -->
+  <script src="js/libs/jquery-1.7.1.min.js"></script>
+  <!-- latest jQuery direct from google's CDN -->
+  
+  <!-- Acoordion para o Menu Lateral -->
+  <script src='js/libs/jquery.cookie.js'></script>
+  <script src='js/libs/jquery.dcjqaccordion.2.7.min.js'></script>
+  
+  <!-- Navegação por Abas / tipos de visualização do painel de gráficos (gráficos e grade) -->
+  <script defer src="js/libs/organictabs.jquery.js"></script>
+
+  <!-- scripts concatenated and minified via build script -->
+  <script src="js/plugins.js"></script>
+  <script src="js/script.js"></script>
+  <!-- end scripts -->
+  
+
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /calafrioneutro
+Disallow: /telelistas
+Disallow: /job
+Disallow: /novo

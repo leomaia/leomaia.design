@@ -1,0 +1,861 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+html { background: #f5f2e0; }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+    color: #868268;
+}
+
+a { text-decoration: underline; }
+a:hover { text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+/* Basic Structure
+   ========================================================================== */
+
+.wrapper {
+    position: relative;
+    max-width: 1170px;
+    padding-left: 386px;
+}
+
+.site-nav {
+    position: fixed;
+    top: 48px;
+    left: 80px;
+    width: 200px;
+}
+
+/*
+ Logo
+ */
+
+.logo {
+    width: 185px;
+    height: 185px;
+    line-height: 185px;
+    margin: 0 auto 52px;
+    text-align: center;
+}
+
+.logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    /* Border Radius */
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+    /* Transition */
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        transition: all 0.3s ease;   
+}
+
+.logo img {
+    position: relative;
+    top: -5px;
+    /* Opacity */
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+        filter: alpha(opacity=50);
+        -moz-opacity: 0.5;
+        -khtml-opacity: 0.5;
+        opacity: 0.5;
+    /* Transition */
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        transition: all 0.3s ease;   
+}
+
+.logo a:hover {
+    /* Box Shadow */
+        -webkit-box-shadow: inset 0 0 50px 20px rgba(0,0,0,0.2);
+        -moz-box-shadow: inset 0 0 50px 20px rgba(0,0,0,0.2);
+        box-shadow: inset 0 0 50px 20px rgba(0,0,0,0.2);
+}
+
+.ux-page .logo a {
+    cursor: default;
+}
+
+.ux-page .logo a:hover {
+    /* Box Shadow */
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+}
+
+.logo a:hover img {
+    /* Opacity */
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+        filter: alpha(opacity=90);
+        -moz-opacity: 0.9;
+        -khtml-opacity: 0.9;
+        opacity: 0.9;
+}
+
+.ux-page .logo a:hover img {
+    /* Opacity */
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+        filter: alpha(opacity=50);
+        -moz-opacity: 0.5;
+        -khtml-opacity: 0.5;
+        opacity: 0.5;
+}
+
+.logo a:active {
+    /* Box Shadow */
+        -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+        -moz-box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+        box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+}
+
+/*
+ Site Navigation
+ */
+
+.menu {
+    list-style: none;
+    margin: 0 0 2em 0;
+    padding: 0;
+}
+
+.menu a {
+    display: block;
+    padding: 5px 15px;
+    border-top: 1px dotted #cbc5a4;
+    font-size: 1.5em; /* 24px */
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+    text-decoration: none;
+    /* Transition */
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        transition: all 0.3s ease;    
+}
+
+.menu li:last-child a {
+    border-bottom: 1px dotted #cbc5a4;
+}
+
+/*
+ Contact and social network links
+ */
+
+.contact > h2 {
+    font-size: 1.125em; /* 18px */
+    font-weight: lighter;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+/*
+ Social links
+ */
+
+.social {
+    overflow: hidden;
+    margin: 0 0 2em 0;
+    padding: 0;
+    list-style: none;
+}
+
+.social li {
+    float: left;
+    margin: 0 5px 5px 0;
+}
+
+.social a {
+    display: block;
+    width: 33px;
+    height: 33px;
+    background: #e2dec5;
+    /* Border Radius */
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+}
+
+.social img {
+    /* Opacity */
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+        filter: alpha(opacity=30);
+        -moz-opacity: 0.3;
+        -khtml-opacity: 0.3;
+        opacity: 0.3;
+}
+
+.social a,
+.social img {
+    /* Transition */
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        transition: all 0.3s ease; 
+}
+
+.social a:hover {
+    background: #fff;
+    /* Box Shadow */
+        -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.4);
+        -moz-box-shadow: inset 0 0 2px rgba(0,0,0,0.4);
+        box-shadow: inset 0 0 2px rgba(0,0,0,0.4);
+}
+
+.social a:hover img {
+    /* Opacity */
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+        filter: alpha(opacity=50);
+        -moz-opacity: 0.5;
+        -khtml-opacity: 0.5;
+        opacity: 0.5;
+}
+
+.social a:active {
+    background: #cfc9a6;
+    /* Box Shadow */
+        -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.6);
+        -moz-box-shadow: inset 0 0 4px rgba(0,0,0,0.6);
+        box-shadow: inset 0 0 4px rgba(0,0,0,0.6);
+}
+
+
+/* Main Content
+   ========================================================================== */
+
+.main {
+    padding: 0 6em 3em 0;
+    /* Animation */
+        -webkit-animation: main 2s;
+        -moz-animation: main 2s;
+        animation: main 2s;
+}
+
+@-webkit-keyframes main
+{
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes main
+{
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/*
+ Section Header
+ */
+
+.section-header {
+    padding: 7.7em 0;
+ }
+
+.section-header h3 {
+    margin: 0;
+    font-size: 2.5em; /* 40px / 16 */
+    line-height: 0.9em;
+}
+
+.section-header .occupation {
+    font-size: 0.7em;
+}
+
+.main img { max-width: 100%; }
+
+/* Home
+   ========================================================================== */
+
+/*
+ About Illustration
+ */
+
+.about-pic {
+    margin-bottom: 4em;
+    padding: 1em;
+    /* background: url(../img/about-pic-bg-02.png) left bottom repeat-x; */
+    text-align: center;
+}
+
+/*
+ About Text
+ */
+
+.text-block {
+    float: left;
+    width: 45%;
+    margin-bottom: 2em;
+}
+
+.text-block p {
+    line-height: 2em; margin: 0 0 1.7em;
+}
+
+.text-block li {
+    margin-bottom: 1em;
+    line-height: 1.6em;
+}
+
+/*
+ Dribbble Shots
+ */
+
+.dribbble-shots {
+    overflow: hidden;
+    float: right;
+    width: 45%;
+    margin-bottom: 2em;
+}
+
+.dribbble-shots h3 { margin: 0 0 1em; font-size: 1.5em; line-height: 0.9em; }
+
+#dribbble {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#dribbble li {
+    display: inline-block;
+    width: 220px;
+    margin: 0 10px 10px 0;
+    list-style: none;
+}
+
+#dribbble li:hover {
+    /* Opacity */
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+        filter: alpha(opacity=50);
+        -moz-opacity: 0.5;
+        -khtml-opacity: 0.5;
+        opacity: 0.5;
+}
+
+#dribbble img {
+    width: 100%;
+    max-width: 100%;
+}
+
+
+/* Portfolio
+   ========================================================================== */
+
+.work { margin-bottom: 7em; }
+.work:last-child { margin-bottom: 2em; }
+
+.work h4 {
+    margin: 0 0 0.5em 0;
+    padding: 0.5em 1em;
+    border-top: 1px dotted #f97dcd;
+    font-size: 1.25em; /* 20px / 16 */
+    font-weight: normal;
+    text-align: center;
+}
+
+.work img { display: block; margin: 0 auto 1em; }
+.work img:last-child { margin-bottom: 0; }
+.work figcaption { text-align: center; }
+
+.portraits {
+    overflow: hidden;
+}
+
+.portraits img {
+    float: left;
+    width: 33.3%;
+    margin: 0;
+}
+
+.portraits figcaption {
+    clear: both;
+    padding-top: 1em;
+}
+
+/* Theming
+   ========================================================================== */
+
+.ux-page a { color: #0dd1b4; }
+.about-page a { color: #f48458; }
+.illustration-page a { color: #f97dcd; }
+
+.ux-page .logo a { background: #0dd1b4; }
+.about-page .logo a { background: #f48458; }
+.illustration-page .logo a { background: #f97dcd; }
+
+.menu a { color: #d1ccae; }
+.ux-page .menu a:hover { color: #008d78; }
+.ux-page .ux a, .ux-page .ux a:hover { color: #0dd1b4; }
+.about-page .menu a:hover { color: #d35727; }
+.about-page .about a, .about-page .about a:hover { color: #f48458; }
+.illustration-page .menu a:hover { color: #e453b1; }
+.illustration-page .illustration a, .illustration-page .illustration a:hover { color: #f97dcd; }
+
+.ux-page h1,
+.ux-page h2,
+.ux-page h3,
+.ux-page h4,
+.ux-page h5,
+.ux-page h6 {
+    color: #0dd1b4;
+}
+
+.ux-page .work h4 {
+    border-color: #0dd1b4;
+}
+
+.about-page h1,
+.about-page h2,
+.about-page h3,
+.about-page h4,
+.about-page h5,
+.about-page h6 {
+    color: #f48458;
+}
+
+.illustration-page h1,
+.illustration-page h2,
+.illustration-page h3,
+.illustration-page h4,
+.illustration-page h5,
+.illustration-page h6 {
+    color: #f97dcd;
+}
+
+.contact > h2 {
+    color: #b0ab8a;
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+
+@media only screen and (max-width: 1200px) {
+
+    .text-block {
+        margin-bottom: 5em;
+    }
+
+    .text-block,
+    .dribbble-shots {
+        float: none;
+        width: auto;
+    }
+
+}
+
+@media only screen and (max-width: 900px) {    
+
+    body {
+        padding-bottom: 8em;
+    }
+
+    .wrapper {
+        padding: 2em;
+    }
+
+    .site-nav {
+        position: static;
+        width: auto;
+    }
+
+    .menu {
+        text-align: center;
+    }
+
+    .menu li {
+        display: inline-block;
+    }
+
+    .menu a {
+        border-top: 1px dotted #cbc5a4;
+        border-bottom: 1px dotted #cbc5a4;
+    }
+
+    .contact {
+        z-index: 10;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        margin: 0;
+        padding: 1em 0;
+        background: #fff;
+        border-top: 1px dotted #cbc5a4;
+    }
+
+    .contact, .social {
+        text-align: center;
+    }
+
+    .contact > h2 {
+        display: none;
+    }
+
+    .social {
+        margin-bottom: 0;
+    }
+
+    .contact p {
+        margin: 0.5em 0;
+        font-size: 0.8em;
+    }
+
+    .social li {
+        display: inline-block;
+        float: none;
+        margin: 0 1px 1px 0;
+    }
+
+    .main {
+        padding: 0;
+    }
+
+    .main h3,
+    .main h4 {
+        text-align: center;
+    }
+
+    .section-header {
+        padding: 2em 0 4em;
+    }
+
+    .section-header h3 {
+        line-height: 0.9em;
+    }
+
+    .section-header .occupation {
+        display: block;
+        padding-top: 1em;
+        line-height: 0.9em;
+    }
+
+    #dribbble {
+        text-align: center;
+    }
+
+    #dribbble li {
+        display: inline-block;
+        float: none;
+    }
+
+    .about-pic {
+        margin-top: 2.5em;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .menu a {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 1.2em;
+    }
+
+    .about-pic {
+        background: none;
+    }
+
+    #dribbble li {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .portraits img {
+        width: 50%;
+    }
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

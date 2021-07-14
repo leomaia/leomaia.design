@@ -1,0 +1,193 @@
+body
+{
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size:62.5%;
+color:#666;
+}
+
+a
+{
+color:#0066cc;
+}
+
+a:hover
+{
+text-decoration:none;
+}
+
+.clear
+{
+clear:both;
+}
+
+#wrapper
+{
+position:relative;
+width:940px;
+margin:0 auto;
+}
+
+/* Header */
+#header
+{
+position:fixed;
+z-index:20;
+width:220px;
+padding:20px 0;
+}
+
+#header h1
+{
+text-indent:-90000px;
+width:220px;
+height:162px;
+background:url(../imagens/logo.png) no-repeat;
+}
+
+#header h1 a
+{
+display:block;
+width:100%;
+height:100px;
+}
+
+/* Conteúdo */
+#content
+{
+position:absolute;
+top:165px;
+left:240px;
+width:700px;
+}
+
+.home #content
+{
+padding-top:16px;
+}
+
+#content hr
+{
+ margin-bottom:1.8em;
+ height:1px;
+ background:#e5e5e5;
+ border:none;
+}
+
+#content figure
+{
+ margin-bottom:1.8em;
+}
+
+/* parágrafos */
+#content p
+{
+font-size:1.4em;
+line-height:2em;
+margin-bottom:1.8em;
+}
+
+#content p a:hover
+{
+background:#ff0;
+}
+
+/* títulos */
+#content h2, #content h3, #content h4
+{
+color:#333;
+margin-bottom:0.3em;
+font-size:2em;
+}
+
+/* título trabalhos */
+#content h2.titulo-trabalho, #content h3.titulo-trabalho
+{
+position:relative;
+font-size:2em;
+border-top:1px solid #e5e5e5;
+margin-bottom:0;
+padding:10px 5px;
+}
+
+.titulo-trabalho span.recente
+{
+color:#999;
+}
+
+.titulo-trabalho span.url
+{
+position:absolute;
+right:10px;
+top:12px;
+font-size:0.7em;
+}
+
+.titulo-trabalho span.url a
+{
+color:#999;
+}
+
+.titulo-trabalho span.url a:hover
+{
+color:#333;
+}
+
+.titulo-trabalho a.hLink
+{
+ text-decoration:none;
+ color:#666;
+}
+
+.titulo-trabalho a.hLink:hover
+{
+ color:#000;
+}
+
+/* ------------------------------------- */
+
+/* Páginas Internas */
+
+/* título seção */
+#content h2.titulo-secao
+{
+font-size:4em;
+margin-bottom:0.4em;
+text-transform:lowercase;
+}
+
+.sobre #content, .sites #content, .ilustracoes #content
+{
+top:125px;
+}
+
+.trabalho
+{
+margin-bottom:4em;
+}
+
+.foto-perfil
+{
+float:right;
+margin:-50px 80px 0 20px;
+}
+
+#content p.img-trabalho a:hover
+{
+background:none;
+}
+
+.img-trabalho img
+{
+border:5px solid #fff;
+margin:-5px;
+-moz-box-shadow:0 3px 10px #ccc;
+-webkit-box-shadow:0 3px 10px #ccc;
+box-shadow: 0 3px 10px #ccc;
+}
+
+.img-trabalho a:hover img
+{
+-moz-box-shadow:0 3px 15px #999;
+-webkit-box-shadow:0 3px 15px #999;
+box-shadow: 0 3px 15px #999;
+}

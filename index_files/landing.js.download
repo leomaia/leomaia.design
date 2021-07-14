@@ -1,0 +1,136 @@
+window.addEventListener("load", function(){
+
+          var a = document.getElementById("linkExplore");
+          if (a!=null) {
+              a.onclick = function() {
+                ga('send', 'event', 'Landing', 'linkExplore');
+                setCookie('landingPassed',1, 3000);
+                return true; // actually open link
+              }
+          }
+
+
+          a = document.getElementById("linkExploreSoprano");
+          if (a!=null) {
+              a.onclick = function() {
+                ga('send', 'event', 'Landing', 'linkExploreSoprano');
+                setCookie('landingPassed',1, 3000);
+                setCookie('userLowestNote',37, 3000);
+                setCookie('userHighestNote',61, 3000);
+                return true; // actually open link
+              }
+          }
+
+          a = document.getElementById("linkExploreMezzoSoprano");
+          if (a!=null) {
+              a.onclick = function() {
+                ga('send', 'event', 'Landing', 'linkExploreMezzoSoprano');
+                setCookie('landingPassed',1, 3000);
+                setCookie('userLowestNote',34, 3000);
+                setCookie('userHighestNote',58, 3000);
+                return true; // actually open link
+              }
+          }
+
+
+          a = document.getElementById("linkExploreContralto");
+          if (a!=null) {
+              a.onclick = function() {
+                ga('send', 'event', 'Landing', 'linkExploreContralto');
+                setCookie('landingPassed',1, 3000);
+                setCookie('userLowestNote',30, 3000);
+                setCookie('userHighestNote',54, 3000);
+                return true; // actually open link
+              }
+          }
+
+          a = document.getElementById("linkExploreCountertenor");
+          if (a!=null) {
+              a.onclick = function() {
+                ga('send', 'event', 'Landing', 'linkExploreCountertenor');
+                setCookie('landingPassed',1, 3000);
+                setCookie('userLowestNote',29, 3000);
+                setCookie('userHighestNote',53, 3000);
+                return true; // actually open link
+              }
+          }
+
+          a = document.getElementById("linkExploreTenor");
+          if (a!=null) {
+              a.onclick = function() {
+                ga('send', 'event', 'Landing', 'linkExploreTenor');
+                setCookie('landingPassed',1, 3000);
+                setCookie('userLowestNote',25, 3000);
+                setCookie('userHighestNote',49, 3000);
+                return true; // actually open link
+              }
+          }
+
+          a = document.getElementById("linkExploreBaritone");
+          if (a!=null) {
+              a.onclick = function() {
+                ga('send', 'event', 'Landing', 'linkExploreBaritone');
+                setCookie('landingPassed',1, 3000);
+                setCookie('userLowestNote',22, 3000);
+                setCookie('userHighestNote',46, 3000);
+                return true; // actually open link
+              }
+          }
+
+          a = document.getElementById("linkExploreBass");
+          if (a!=null) {
+              a.onclick = function() {
+                ga('send', 'event', 'Landing', 'linkExploreBass');
+                setCookie('landingPassed',1, 3000);
+                setCookie('userLowestNote',17, 3000);
+                setCookie('userHighestNote',41, 3000);
+                return true; // actually open link
+              }
+          }
+
+          var a = document.getElementById("linkFindKey");
+          if (a!=null) {
+              a.onclick = function() {
+                ga('send', 'event', 'Landing', 'linkFindKey');
+                setCookie('landingPassed',1, 3000);
+                return true; // actually open link
+              }
+          }
+
+          var a = document.getElementById("linkExploreSmall");
+            if (a!=null) {
+                a.onclick = function() {
+                  ga('send', 'event', 'Landing', 'linkExploreSmall');
+                  setCookie('landingPassed',1, 3000);
+                  return true; // actually open link
+                }
+            }
+
+          var a = document.getElementById("linkRepertore");
+          if (a!=null) {
+              a.onclick = function() {
+                ga('send', 'event', 'Landing', 'linkRepertore');
+                setCookie('landingPassed',1, 3000);
+                return true; // actually open link
+              }
+          }
+
+          var a = document.getElementById("linkSearchForSongs");
+          if (a!=null) {
+              a.onclick = function() {
+                ga('send', 'event', 'Landing', 'linkSearchForSongs');
+                setCookie('landingPassed',1, 3000);
+                return true; // actually open link
+              }
+          }
+
+          var a = document.getElementById("linkTuner");
+          if (a!=null) {
+              a.onclick = function() {
+                ga('send', 'event', 'Landing', 'linkTuner');
+                setCookie('landingPassed',1, 3000);
+                return true; // actually open link
+              }
+          }
+
+});

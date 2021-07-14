@@ -1,0 +1,313 @@
+window.addEventListener("load", function(){
+
+    // create one global XHR object
+    // so we can abort old requests when a new one is made
+    window.hinterXHR = new XMLHttpRequest();
+
+    var el = document.getElementById("btn-submit-user-range");
+    if (el != null) {
+        el.addEventListener("click", function(event){
+            submitUserRange(event);
+        });
+
+        document.getElementById("link-show-range-select").addEventListener("click", function(event){
+            document.getElementById('range-select-form').classList.remove("d-none");
+        });
+
+        var introLink = document.getElementById("link-show-range-select-intro");
+        if (introLink != null) {
+            introLink.addEventListener("click", function(event){
+                document.getElementById('range-select-form').classList.remove("d-none");
+            });
+        }
+
+        loadRange();
+    }
+
+    addLoginHandlers();
+    checkCookieConsent();
+
+
+});
+
+function checkCookieConsent() {
+    var div =  document.getElementById("cookieConsent");
+
+    if (div != null) {
+        var consentGiven = getCookie("cookieConsentGiven");
+        if (consentGiven != "yes") {
+
+            var btn = document.getElementById("btnCookieOK");
+            btn.addEventListener("click", function(event) {
+
+                setCookie("cookieConsentGiven", "yes", 3000);
+                document.getElementById("cookieConsent").classList.add("d-none");
+
+                ga('send', 'event', 'CookieConsent', 'CookieConsentGiven');
+            });
+
+            div.classList.remove("d-none");
+            ga('send', 'event', 'CookieConsent', 'CookieConsentShowDialog');
+        }
+    }
+
+}
+
+function submitUserRange (event) {
+    var userLowestNote = document.getElementById('userLowestNote');
+    var userHighestNote = document.getElementById('userHighestNote');
+    var low = userLowestNote.selectedOptions[0].value;
+    var high = userHighestNote.selectedOptions[0].value;
+    var lowText = userLowestNote.selectedOptions[0].innerHTML;
+    var highText = userHighestNote.selectedOptions[0].innerHTML;
+
+
+    if (low != -1 && high != -1 && (high > low )) {
+        showRange(lowText, highText);
+
+        setCookie('userLowestNote',low, 3000);
+        setCookie('userHighestNote',high, 3000);
+
+        userLowestNote.classList.remove("is-invalid");
+        userHighestNote.classList.remove("is-invalid");
+
+        var divLearnVoiceTypes = document.getElementById('divLearnVoiceTypes');
+        if (divLearnVoiceTypes != null) { divLearnVoiceTypes.classList.add('d-none'); }
+        var divFindVocalRange = document.getElementById('divFindVocalRange');
+        if (divFindVocalRange != null) { divFindVocalRange.classList.add('d-none'); }
+
+        ga('send', 'event', 'UserRange', 'Update', lowText + "-" + highText);
+
+        event.target.dispatchEvent(new Event('updated'));
+
+    } else {
+        userLowestNote.classList.add("is-invalid");
+        userHighestNote.classList.add("is-invalid");
+
+        var divLearnVoiceTypes = document.getElementById('divLearnVoiceTypes');
+        if (divLearnVoiceTypes != null) { divLearnVoiceTypes.classList.remove('d-none'); }
+        var divFindVocalRange = document.getElementById('divFindVocalRange');
+        if (divFindVocalRange != null) { divFindVocalRange.classList.remove('d-none'); }
+
+        ga('send', 'event', 'UserRange', 'UpdateFailure', lowText + "-" + highText);
+    }
+}
+
+function showRange(lowText, highText) {
+
+    var intro = document.getElementById('div-intro');
+    if (intro != null) { intro.classList.add("d-none"); }
+    intro = document.getElementById('divLearnVoiceTypes');
+    if (intro != null) { intro.classList.add("d-none");}
+    intro = document.getElementById('divFindVocalRange');
+    if (intro != null) { intro.classList.add("d-none");}
+
+    document.getElementById('range-select-form').classList.add("d-none");
+    document.getElementById('indicator-my-range').classList.remove("d-none");
+
+    var mainNav = document.getElementById('main-nav');
+    if (mainNav != null) {
+        mainNav.classList.remove("d-none");
+    }
+
+    var searchForm = document.getElementById('searchForm');
+    if (searchForm != null) {
+        searchForm.classList.remove("d-none");
+    }
+
+
+    document.getElementById('indicator-my-range-value').innerHTML = lowText + "-" + highText;
+
+    var filters = document.getElementById('filters-form');
+    if (filters != null) { filters.classList.remove("d-none"); }
+}
+
+function loadRange () {
+    var low = getCookie('userLowestNote');
+    var high = getCookie('userHighestNote');
+
+    if (low != "" && high != "") {
+        var options = document.getElementById('userLowestNote').options;
+        var lowText = "";
+        for (var i= 0; i < options.length; i++) {
+            if (options[i].value == low) {
+                options[i].selected = true;
+                lowText = options[i].innerHTML;
+                break;
+            }
+        }
+
+        var highText ="";
+        options = document.getElementById('userHighestNote').options;
+        for (var i= 0; i < options.length; i++) {
+            if (options[i].value == high) {
+                options[i].selected = true;
+                highText = options[i].innerHTML;
+                break;
+            }
+        }
+        showRange(lowText, highText);
+
+    }
+
+}
+
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires="+ d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+
+function getBadge(difficulty){
+    var badgeSpan;
+    switch(difficulty) {
+      case "EASY":
+        badgeSpan =  "<span class='badge badge-pill badge-success' title='Your vocal range is significantly wider than that of a song'>";
+        break;
+      case "MODERATE":
+        badgeSpan = "<span class='badge badge-pill badge-info' title='The difference between your vocal range and that of a song is between 2 and 6 semitones'>";
+        break;
+      case "CHALLENGING":
+        badgeSpan = "<span class='badge badge-pill badge-warning' title='Your vocal range and that of a song are almost identical'>";
+        break;
+      case "VERY_CHALLENGING":
+        badgeSpan = "<span class='badge badge-pill badge-danger' title='Song's singing range is one or 2 semitones wider than your vocal range'>";
+        break;
+      case "IMPOSSIBLE":
+        badgeSpan = "<span class='badge badge-pill badge-dark' title='The range of the song is more than 2 semitones wider than your vocal range'>";
+        break;
+      default:
+        badgeSpan = "<span class='badge badge-pill badge-primary'>";
+    }
+    return badgeSpan;
+}
+
+function updateSongsIndicator() {
+    var mySongsText = localStorage.getItem('mySongs');
+    if (mySongsText == null) mySongsText = "{}";
+    var mySongs = JSON.parse(mySongsText);
+
+    var number = Object.keys(mySongs).length;
+
+    if (number > 0) {
+        document.getElementById("songs-number-indicator").innerHTML = number;
+    }
+
+}
+
+function addLoginHandlers(){
+    var loginBtn = document.getElementById("loginBtn");
+    if (loginBtn != null) {
+       loginBtn.addEventListener("click", function(event){
+           ga('send', 'event', 'Login', 'FacebookLoginAttempt');
+           var url = "/login?referrer=" + encodeURIComponent(window.location.href);
+           window.location.href = url;
+       });
+    }
+
+    var logoutBtn = document.getElementById("logoutBtn");
+    if (logoutBtn != null) {
+       logoutBtn.addEventListener("click", function(event) {
+           ga('send', 'event', 'Logout', 'FacebookLogout');
+           FB.logout(function(response) {
+           });
+            setCookie("fblo_1222325527958891", "", 3000);
+            setCookie("facebookUserId", "", 3000);
+            setCookie("facebookAccessToken", "", 3000);
+            location.reload();
+
+       });
+    }
+
+}
+
+function getNoteByNumber(num) {
+    var options = document.getElementById('userLowestNote').options;
+    var text = "";
+    for (var i= 0; i < options.length; i++) {
+        if (options[i].value == num) {
+            text = options[i].innerHTML;
+        }
+    }
+    return text;
+}
+
+
+function simulate(element, eventName)
+{
+    var options = extend(defaultOptions, arguments[2] || {});
+    var oEvent, eventType = null;
+
+    for (var name in eventMatchers)
+    {
+        if (eventMatchers[name].test(eventName)) { eventType = name; break; }
+    }
+
+    if (!eventType)
+        throw new SyntaxError('Only HTMLEvents and MouseEvents interfaces are supported');
+
+    if (document.createEvent)
+    {
+        oEvent = document.createEvent(eventType);
+        if (eventType == 'HTMLEvents')
+        {
+            oEvent.initEvent(eventName, options.bubbles, options.cancelable);
+        }
+        else
+        {
+            oEvent.initMouseEvent(eventName, options.bubbles, options.cancelable, document.defaultView,
+            options.button, options.pointerX, options.pointerY, options.pointerX, options.pointerY,
+            options.ctrlKey, options.altKey, options.shiftKey, options.metaKey, options.button, element);
+        }
+        element.dispatchEvent(oEvent);
+    }
+    else
+    {
+        options.clientX = options.pointerX;
+        options.clientY = options.pointerY;
+        var evt = document.createEventObject();
+        oEvent = extend(evt, options);
+        element.fireEvent('on' + eventName, oEvent);
+    }
+    return element;
+}
+
+function extend(destination, source) {
+    for (var property in source)
+      destination[property] = source[property];
+    return destination;
+}
+
+var eventMatchers = {
+    'HTMLEvents': /^(?:load|unload|abort|error|select|change|submit|reset|focus|blur|resize|scroll)$/,
+    'MouseEvents': /^(?:click|dblclick|mouse(?:down|up|over|move|out))$/
+}
+var defaultOptions = {
+    pointerX: 0,
+    pointerY: 0,
+    button: 0,
+    ctrlKey: false,
+    altKey: false,
+    shiftKey: false,
+    metaKey: false,
+    bubbles: true,
+    cancelable: true
+}

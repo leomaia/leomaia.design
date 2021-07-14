@@ -1,0 +1,341 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-br"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <title>BRLumina &gt; Cenário &gt; Alterar Dados</title>
+
+  <link rel="stylesheet" href="css/style_local.css">
+  <link rel="shortcut icon" href="img/favicon.ico" />
+
+  <!-- Modernizr / Respond.
+       Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
+       For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
+  <script src="js/libs/modernizr-2.0.6.min.js"></script>
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="js/libs/jquery-1.6.2.min.js"></script>
+
+  <!-- scripts concatenated and minified via ant build script-->
+  <script defer src="js/script.js"></script>
+  <script defer src="js/plugins.js"></script>
+  <!-- end scripts-->
+</head>
+
+<body>
+
+  <div class="container">
+    
+	<header class="header">	
+		<h1 class="logo ir"><a href="index.html" title="Ir para a tela inicial">BRLumina</a></h1>
+		
+		<p class="petrobras ir"><a href="http://www.petrobras.com.br/" title="Acesse o site da Petrobras" target="_blank">Petrobras</a></p>
+		
+		<p class="usuario">Leonardo da Cunha Maia (BWR0) - <a href="" title="Sair do sistema">Sair</a></p>
+		
+		<nav class="mainNav">
+		
+			<div class="navProjetos">
+				<p class="current">Projeto YYZ</p>
+				
+				<ul class="listaProjetos">
+					<li><a href="">Projeto XPTO</a></li>
+					<li><a href="">Projeto ABCD</a></li>
+					<li><a href="">Projeto MMO</a></li>
+					<li><a href="">Projeto PRC</a></li>
+				</ul>
+				
+				<div class="arquivo">
+					<span class="mais"><img src="img/menu_mais.png" alt="Mais"></span>
+					<ul class="opcoes">
+						<li class="listar"><a href="index.html" title="Listar Projetos">Listar Projetos</a></li>
+						<li class="novo"><a href="criar_projeto.html" title="Novo Projeto">Novo Projeto</a></li>
+						<li class="importar"><a href="" title="Importar Projeto">Importar</a></li>
+						<li class="importarDLL"><a href="importar_dll.html" title="Importar DLLs de Teste">Importar DLLs de Teste</a></li>	</ul>
+				</div> <!--! end of .arquivo -->
+			</div> <!--! end of .navProjetos -->		
+			
+			<div class="breadcrumbs">
+				<span class="caption">Você está aqui:</span>
+				
+				<ul>
+					<li class="first"><a href="index.html" title="Lista de Projetos">Início</a></li>
+					<li><a href="projeto_resumo.html" title="Projeto YYZ">Projeto: YYZ</a></li>
+					<li class="atual">Cenário: FPS</li>
+				</ul>
+			</div><!--! end of .breadcrumbs -->
+			
+			<p class="admin"><span class="ajuda">Ajuda</span>
+ 			&nbsp;|&nbsp; <a href="" title="Sair">Sair</a></p>
+			
+			<div class="ajudaContent">
+				<div class="botoesAcao">				
+					<div class="botao">
+						<a href="" title="Baixar Manual do BRLumina"><img src="img/icone_pdf.png" alt="Baixar Manual do BRLumina">
+						<span>Baixar Manual do BRLumina</span></a>
+					</div> <!--! end of .botao -->
+				</div> <!--! end of .botoesAcao -->	
+
+				<p class="titulo">Título</p>
+				
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel condimentum urna. Aenean at tortor et odio fringilla iaculis. Duis velit lacus, venenatis a dignissim et, semper eget metus. Ut nibh sapien, dapibus ut hendrerit et, laoreet in ipsum.</p>
+				
+				<p>Vivamus varius leo et dolor congue in vestibulum risus bibendum. Vestibulum fermentum elementum dolor, ornare tempor mi adipiscing vitae. Phasellus nisi neque, convallis vitae varius non, auctor sed metus. Pellentesque vitae dui felis. Curabitur sit amet diam eget elit tincidunt tempor in vitae sapien.</p>
+				
+				<p class="titulo">Título</p>
+				
+				<p>Vivamus ultrices leo in dui fermentum auctor. Nunc diam risus, feugiat sit amet laoreet id, rutrum at felis. Mauris feugiat, velit in vulputate venenatis, nisl mauris fringilla felis, quis porttitor orci lorem ut odio. Etiam vel feugiat leo. Vivamus a eros nec turpis convallis porttitor. </p>
+			</div> <!--! end of .ajudaContent -->
+			
+		</nav> <!--! end of .mainNav -->
+		
+		<nav class="projectNav">
+			<ul>
+				<li><a href="projeto_resumo.html" title="Visão Geral">Visão Geral</a></li>
+				<li><a href="variaveis.html" title="Variáveis">Variáveis</a></li>
+				<li class="selected temSubMenu"><a href="" title="Cenários">Cenários</a>
+					<ul class="menuSuspenso">
+						<li><a href="cenario.html" title="Criar um novo Cenário">+ Novo Cenário</a></li>
+						<li><a href="cenario.html">Cenário FPS</a></li>
+						<li><a href="cenario.html">Cenário COD</a></li>
+						<li><a href="cenario.html">Cenário YTF</a></li>
+						<li><a href="cenario.html">Cenário IMM</a></li>
+						<li><a href="cenario.html">Cenário WSY</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav><!--! end of .projectNav -->
+		
+	</header> <!--! end of .header -->
+	
+	<div class="main cenario configuracao temMenuLateral" role="main"><!-- nessa div, sempre utilizo uma classe para a seção em questão (.cenario e .vazio) para facilitar na hora da formatação -->
+		
+		<nav class="secondaryNav sub clearfix">
+			<h2 class="titulo">Cenário FPS</h2>
+			
+			<ul>
+				<li><a href="cenario.html" title="Informações">Informações</a></li>
+				<li class="active"><a href="cenario_alterar_dados.html" title="Alterar Variáveis">Alterar Variáveis</a>
+					<ul class="submenu submenuAltVar">
+						<li class="active"><a href="cenario_alterar_dados.html" title="Dados">Dados</a></li>
+						<li><a href="cenario_alterar_sintonia.html" title="Sintonia">Sintonia</a></li>
+						<li><a href="cenario_alterar_ruido.html" title="Ruído">Ruído</a></li>
+						<li><a href="cenario_alterar_avancado.html" title="Avançado">Avançado</a></li>
+					</ul>
+				</li>
+				<li><a href="cenario_resultados.html" title="Resultados">Resultados</a></li>
+			</ul>
+			
+			
+		</nav> <!--! end of .secondaryNav -->
+		
+		<header class="sectionHeader">
+			<h3 class="tituloMaster">Alterar Dados</h3>
+			
+			<div class="botoesAcao clearfix">
+				<div class="aviso">
+					<img src="img/icone_atencao.png" alt="Atenção">
+					<strong>Atenção.</strong> Existem dados não salvos na tabela.
+				</div> <!--! end of .aviso -->
+				
+				<div class="botao enabled">
+					<a href="" title="Salvar alterações"><img src="img/icone_salvar.png" alt="Salvar">
+					<span>Salvar Dados</span></a>
+				</div> <!--! end of .botao -->
+				
+				<div class="botao">
+					<a href="" title="Descartar alterações"><img src="img/icone_descartar.png" alt="Descartar">
+					<span>Descartar Alterações</span></a>
+				</div> <!--! end of .botao -->
+			</div> <!--! end of .botoesAcao -->	
+		</header><!--! end of .sectionHeader -->	
+		
+		<p class="exibicao">
+			<label>Exibindo</label>
+			<select>
+				<option>Manipuladas</option>
+				<option>Controladas</option>
+				<option>Perturbações</option>
+			</select>
+		</p>
+		
+		
+		<table class="tabDados editavel wide">
+			<thead>
+				<tr class="tableHead">
+					<th scope="col">Variável</th>
+					<th scope="col" class="checkbox"><input type="checkbox" /> Status</th>
+					<th scope="col">Lim. Inf.</th>
+					<th scope="col">Valor</th>
+					<th scope="col">Lim. Sup.</th>
+					<th scope="col" class="checkbox"><input type="checkbox" /> Modo Computador</th>
+					<th scope="col">Saturação</th>
+				</tr>
+			</thead>
+			<tr>
+				<th scope="row">FIC-09_SP_EXP</th>
+				<td><input type="checkbox" /></td>
+				<td><input type="text" value="0000000000" class="marcado" /></td>
+				<td><input type="text" value="0000000000" class="valorLimite" /></td>
+				<td><input type="text" value="0000000000" /></td>
+				<td><input type="checkbox" /></td>
+				<td>
+					<select>
+						<option>Valor X</option>
+						<option>Valor Y</option>
+						<option>Valor Z</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">FIC-09_SP_EXP</th>
+				<td><input type="checkbox" /></td>
+				<td><input type="text" value="0000000000" /></td>
+				<td><input type="text" value="0000000000" class="valorLimite" /></td>
+				<td><input type="text" value="0000000000" class="marcado" /></td>
+				<td><input type="checkbox" /></td>
+				<td>
+					<select>
+						<option>Valor X</option>
+						<option>Valor Y</option>
+						<option>Valor Z</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">FIC-09_SP_EXP</th>
+				<td><input type="checkbox" /></td>
+				<td><input type="text" value="0000000000" /></td>
+				<td><input type="text" value="0000000000" /></td>
+				<td><input type="text" value="0000000000" /></td>
+				<td><input type="checkbox" /></td>
+				<td>
+					<select>
+						<option>Valor X</option>
+						<option>Valor Y</option>
+						<option>Valor Z</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">FIC-09_SP_EXP</th>
+				<td><input type="checkbox" /></td>
+				<td><input type="text" value="0000000000" /></td>
+				<td><input type="text" value="0000000000" /></td>
+				<td><input type="text" value="0000000000" /></td>
+				<td><input type="checkbox" /></td>
+				<td>
+					<select>
+						<option>Valor X</option>
+						<option>Valor Y</option>
+						<option>Valor Z</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">FIC-09_SP_EXP</th>
+				<td><input type="checkbox" /></td>
+				<td><input type="text" value="0000000000" /></td>
+				<td><input type="text" value="0000000000" /></td>
+				<td><input type="text" value="0000000000" /></td>
+				<td><input type="checkbox" /></td>
+				<td>
+					<select>
+						<option>Valor X</option>
+						<option>Valor Y</option>
+						<option>Valor Z</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">FIC-09_SP_EXP</th>
+				<td><input type="checkbox" /></td>
+				<td><input type="text" value="0000000000" /></td>
+				<td><input type="text" value="0000000000" /></td>
+				<td><input type="text" value="0000000000" /></td>
+				<td><input type="checkbox" /></td>
+				<td>
+					<select>
+						<option>Valor X</option>
+						<option>Valor Y</option>
+						<option>Valor Z</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">FIC-09_SP_EXP</th>
+				<td><input type="checkbox" /></td>
+				<td><input type="text" value="0000000000" /></td>
+				<td><input type="text" value="0000000000" /></td>
+				<td><input type="text" value="0000000000" /></td>
+				<td><input type="checkbox" /></td>
+				<td>
+					<select>
+						<option>Valor X</option>
+						<option>Valor Y</option>
+						<option>Valor Z</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">FIC-09_SP_EXP</th>
+				<td><input type="checkbox" /></td>
+				<td><input type="text" value="0000000000" /></td>
+				<td><input type="text" value="0000000000" /></td>
+				<td><input type="text" value="0000000000" /></td>
+				<td><input type="checkbox" /></td>
+				<td>
+					<select>
+						<option>Valor X</option>
+						<option>Valor Y</option>
+						<option>Valor Z</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">FIC-09_SP_EXP</th>
+				<td><input type="checkbox" /></td>
+				<td><input type="text" value="0000000000" /></td>
+				<td><input type="text" value="0000000000" /></td>
+				<td><input type="text" value="0000000000" /></td>
+				<td><input type="checkbox" /></td>
+				<td>
+					<select>
+						<option>Valor X</option>
+						<option>Valor Y</option>
+						<option>Valor Z</option>
+					</select>
+				</td>
+			</tr>			
+		</table>
+		
+		<div class="botoesAcao bottom">
+			<div class="botao disabled">
+				<a href="" title="Salvar alterações"><img src="img/icone_salvar.png" alt="Salvar">
+				<span>Salvar Dados</span></a>
+			</div> <!--! end of .botao -->
+			
+			<div class="botao disabled">
+				<a href="" title="Descartar alterações"><img src="img/icone_descartar.png" alt="Descartar">
+				<span>Descartar Alterações</span></a>
+			</div> <!--! end of .botao -->
+		</div> <!--! end of .botoesAcao -->	
+		
+		<p class="rodarSimulacao"><input type="button" value="Rodar Simulação" class="actionButton big" /></p>
+	
+	</div> <!--! end of .main -->
+	
+	<footer class="footer">
+		<p class="gerencia">CENPES  /  PDEDS  /  GEGQ  /  GN-TIC  /  TIC-SERV  /  TIC-CENPES</p>
+		<div class="farol"><img src="img/footer_farol.png" alt="Farol"></div>
+	</footer> <!--! end of .footer -->
+	
+  </div> <!--! end of .container -->
+  
+</body>
+</html>

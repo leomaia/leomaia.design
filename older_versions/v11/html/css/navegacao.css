@@ -1,0 +1,66 @@
+/* Menu */
+#main-nav
+{
+margin-bottom:3em;
+}
+
+#main-nav ul
+{
+list-style:none;
+text-align:right;
+padding-top:17px;
+}
+
+#main-nav ul li
+{
+font-size:1.6em;
+margin-bottom:1em;
+text-transform:lowercase;
+}
+
+#main-nav ul li a
+{
+text-decoration:none;
+color:#333;
+font-weight:bold;
+}
+
+#main-nav ul li a:hover
+{
+background:#ff0;
+}
+
+.home #main-nav ul li.home a, .home #main-nav ul li.home a:hover, .sobre #main-nav ul li.sobre a, .sobre #main-nav ul li.sobre a:hover, .sites #main-nav ul li.sites a, .sites #main-nav ul li.sites a:hover, .ilustracoes #main-nav ul li.ilustracoes a, .ilustracoes #main-nav ul li.ilustracoes a:hover
+{
+text-decoration:line-through;
+background:none;
+font-style:italic;
+color:#ccc;
+}
+
+/* Fale Comigo */
+#main-nav ul li.contato
+{
+color:#333;
+font-weight:bold;
+margin:17px 0;
+padding-top:17px;
+border-top:1px solid #e5e5e5;
+}
+
+#main-nav ul li.contato ul li
+{
+font-size:0.7em;
+margin-bottom:1.2em;
+}
+
+#main-nav ul li.contato ul li a
+{
+color:#999;
+text-decoration:underline;
+}
+
+#main-nav ul li.contato ul li a:hover
+{
+color:#333;
+}

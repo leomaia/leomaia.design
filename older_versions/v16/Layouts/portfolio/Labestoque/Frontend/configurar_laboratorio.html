@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <title>LabEstoque &gt; Configurar &gt; Cadastro de Laboratório</title>
+
+        <!-- Escrever uma descrição melhor -->
+        <meta name="description" content="Sistema de impressão de etiquetas e visualização de estoque">
+
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css"><!-- sempre deixar o normalize.css primeiro -->
+        <link rel="stylesheet" href="css/grid.css">
+        <link rel="stylesheet" href="css/main.css"><!-- sempre deixar o main.css por último -->
+        <script src="js/vendor/modernizr-2.6.1.min.js"></script>
+    </head>
+    
+    <body>
+
+        <!-- Cabeçalho -->
+        <header class="header" role="banner">
+            <h1 class="logo"><a href="index.html" title="ir para a tela inicial" class="ir">LabEstoque</a></h1>
+
+            <h2 class="logoPetrobras ir">Petrobras</h2>
+
+            <nav class="mainNav">
+                    <div class="current">Configurar</div>
+                    <ul class="navList">
+                        <li><a href="consultar.html" title="Consultar">Consultar</a></li>
+                        <li><a href="registrar.html" title="Registrar">Registrar</a></li>
+                    </ul>
+            </nav><!-- fim de mainNav -->
+
+            <div class="ispq">
+                    <div class="dialogo">
+                        <p>Para consultar informações sobre o manuseio e o armazenamento de produtos químicos do laboratório de forma segura, acesse
+                            <a href="http://ispq.cenpes.petrobras.com.br/" target="_blank" title="acessar o ISPQ" class="link">
+                                <abbr class="sigla">IPSQ</abbr>
+                                <span class="descricao">Informações de Segurança Sobre Produtos Químicos</span>
+                            </a>
+                        </p>
+                    </div><!-- fim de .infos -->
+            </div><!-- fim de .ajuda -->
+
+            <div class="areaUsuario">
+                <p class="infos">BWR0 - LEONARDO DA CUNHA MAIA - <a href="" title="efetuar logoff">SAIR</a></p>
+                
+                <div class="popNotificacoes">
+                    <div class="icone ir">Notificações</div>
+                    <div class="dialogo">
+                        <ul class="lista">
+                            <li>Lorem ipsum dolor sit <a href="">amet consectetur</a> adipiscing elit. Sed a sem tortor.</li>
+                            <li>Lorem ipsum dolor sit <a href="">amet consectetur</a> adipiscing elit. Sed a sem tortor.</li>
+                            <li>Lorem ipsum dolor sit <a href="">amet consectetur</a> adipiscing elit. Sed a sem tortor.</li>
+                            <li>Lorem ipsum dolor sit <a href="">amet consectetur</a> adpiiscing elit. Sed a sem tortor.</li>
+                            <li>Lorem ipsum dolor sit <a href="">amet consectetur</a> adipiscing elit. Sed a sem tortor.</li>
+                        </ul>
+
+                        <a href="notificacoes.html" title="ver todas as notificações" class="verTodas">Ver Todas</a>
+                    </div><!-- fim de .conteudoNotificacoes -->
+                </div><!-- fim de .notificacoes -->
+            </div><!-- fim de .areaUsuario -->
+
+        </header><!-- fim de .header -->
+
+
+
+        <!-- Conteúdo Principal -->
+        <div class="main configurar" role="main">
+            
+            <div class="configOptions">
+                <label>Cadastro de </label>
+                <select onchange="location = this.options[this.selectedIndex].value;">
+                    <!-- REMOVER ONCHANGE e VALUEs dos OPTIONS - apenas para navegação da interface -->
+                    <option>Laboratório</option>
+                    <option value="configurar_tipo.html">Tipo de Produto</option>
+                    <option value="configurar_produto.html">Produto</option>
+                    <option value="configurar_finalidades.html">Finalidades</option>
+                    <option value="configurar_locais.html">Locais de Estocagem</option>
+                    <option value="configurar_fabricantes.html">Fabricantes</option>
+                    <option value="configurar_usuario.html">Usuário</option>
+                </select>
+            </div><!-- fim de .configOptions -->
+
+            <div class="configArea clearfix">
+                <section class="dataInput">
+
+                    <h3 class="titulo">Editar Laboratório</h3>
+
+                    <ul class="inputList axis">
+                        <li>
+                            <label>Nome</label>
+                            <!-- aplicar a classe "required" para marcar o campo de vermelho -->
+                            <input type="text" value="Laboratório XPTO" />
+                            <span class="campoObrigatorio ir">*</span>
+                        </li>
+                        <li>
+                            <label>Sigla</label>
+                            <!-- aplicar a classe "required" para marcar o campo de vermelho -->
+                            <input type="text" value="Lab XPTO" />
+                            <span class="campoObrigatorio ir">*</span>
+                        </li>
+                        <li>
+                            <label>Gerência</label>
+                            <!-- aplicar a classe "required" para marcar o campo de vermelho -->
+                            <select>
+                                <option>TIC / TIC-SERV / TIC-CENPES</option>
+                            </select>
+                            <span class="campoObrigatorio ir">*</span>
+                        </li>
+                    </ul>
+
+                    <p class="obrigatorios"><span class="campoObrigatorio ir">*</span> <em>Campos obrigatórios.</em></p>
+
+                    <div class="buttonGroup">
+                        <input type="submit" value="Salvar" class="button bigger" />
+                        <input type="submit" value="Cancelar" class="button secondary bigger" />
+                    </div><!-- fim de .buttonGroup -->
+
+                </section><!-- fim de .dataInput -->
+
+                <section class="cadastrados">
+                    <header class="headerCadastros clearfix">
+                        <h3 class="titulo">Laboratórios Cadastrados</h3>
+                        
+                        <div class="toggleExibicao">
+                            <label>Mostrar</label>
+                            <select>
+                                <option>Todos</option>
+                                <option>Ativos</option>
+                                <option>Inativos</option>
+                            </select>
+                        </div><!-- fim de .toggleExibicao -->
+
+                    </header><!-- fim de .headerCadastros -->
+
+                    <div class="listaCadastrosWrapper">
+                        <table class="listaCadastros bloqueioEdicao">
+                            <tr>
+                                <td>
+                                    <div class="infoBlock emEdicao">
+                                        <span class="info tituloCadastro">Laboratório XPTO</span>
+                                        <span class="info infoComplementar">Lab XPTO</span>
+                                        <span class="info infoComplementar">TIC / TIC-SERV / TIC-CENPES</span>
+
+                                        <input type="image" src="img/icone_status_ativo.png" alt="Status: Ativo" title="Cadastro Ativo. Clique para desativá-lo." class="status" />
+
+                                        <div class="acoes">
+                                            <input type="image" src="img/icone_cadastro_editar.png" alt="Editar" title="Editar" class="icone" />
+                                            <input type="image" src="img/icone_cadastro_excluir.png" alt="Excluir" title="Excluir" class="icone" />
+                                        </div><!-- fim de .acoes -->
+
+                                        <span class="editando">Editando</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="infoBlock">
+                                        <span class="info tituloCadastro">Laboratório XPTO</span>
+                                        <span class="info infoComplementar">Lab XPTO</span>
+                                        <span class="info infoComplementar">TIC / TIC-SERV / TIC-CENPES</span>
+
+                                        <input type="image" src="img/icone_status_ativo.png" alt="Status: Ativo" title="Cadastro Ativo. Clique para desativá-lo." class="status" />
+
+                                        <div class="acoes">
+                                            <input type="image" src="img/icone_cadastro_editar.png" alt="Editar" title="Editar" class="icone" />
+                                            <input type="image" src="img/icone_cadastro_excluir.png" alt="Excluir" title="Excluir" class="icone" />
+                                        </div><!-- fim de .acoes -->
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="infoBlock inativo">
+                                        <span class="info tituloCadastro">Laboratório XPTO</span>
+                                        <span class="info infoComplementar">Lab XPTO</span>
+                                        <span class="info infoComplementar">TIC / TIC-SERV / TIC-CENPES</span>
+
+                                        <input type="image" src="img/icone_status_inativo.png" alt="Status: Ativo" title="Cadastro Inativo. Clique para ativá-lo." class="status" />
+
+                                        <div class="acoes">
+                                            <input type="image" src="img/icone_cadastro_excluir.png" alt="Excluir" title="Excluir" class="icone" />
+                                        </div><!-- fim de .acoes -->
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="infoBlock inativo">
+                                        <span class="info tituloCadastro">Laboratório XPTO</span>
+                                        <span class="info infoComplementar">Lab XPTO</span>
+                                        <span class="info infoComplementar">TIC / TIC-SERV / TIC-CENPES</span>
+
+                                        <input type="image" src="img/icone_status_inativo.png" alt="Status: Ativo" title="Cadastro Inativo. Clique para ativá-lo." class="status" />
+
+                                        <div class="acoes">
+                                            <input type="image" src="img/icone_cadastro_excluir.png" alt="Excluir" title="Excluir" class="icone" />
+                                        </div><!-- fim de .acoes -->
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="infoBlock inativo">
+                                        <span class="info tituloCadastro">Laboratório XPTO</span>
+                                        <span class="info infoComplementar">Lab XPTO</span>
+                                        <span class="info infoComplementar">TIC / TIC-SERV / TIC-CENPES</span>
+
+                                        <input type="image" src="img/icone_status_inativo.png" alt="Status: Ativo" title="Cadastro Inativo. Clique para ativá-lo." class="status" />
+
+                                        <div class="acoes">
+                                            <input type="image" src="img/icone_cadastro_excluir.png" alt="Excluir" title="Excluir" class="icone" />
+                                        </div><!-- fim de .acoes -->
+                                    </div>
+                                </td>
+                            </tr>
+                        </table><!-- fim de .listaCadastros -->
+                    </div><!-- fim de .listaCadastrosWrapper -->
+
+                </section><!-- fim de .cadastrados -->
+            </div><!-- fim de .configArea -->
+
+        </div><!-- fim de .main -->
+
+
+
+        <!-- Rodapé -->
+        <footer class="footer">
+            <p class="gerencia">Gerência / Gerência / Gerência</p>
+        </footer><!-- fim de .footer -->
+
+
+
+        <script src="js/vendor/jquery-1.8.0.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
