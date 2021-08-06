@@ -102,8 +102,12 @@ body {
   font-family: 'Roboto Mono', monospace;
   font-size: 16px;
   line-height: 24px;
-  font-weight: 500;
+  font-weight: 400;
   color: #fff;
+}
+
+body,
+.page-internal .header {
   background: #FED417;
   background: -webkit-linear-gradient(bottom, #FED417, #F322FF);
   background: -moz-linear-gradient(bottom, #FED417, #F322FF);
@@ -116,38 +120,12 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
-/*
- * Typography
- */
-
- .type-heading-3 {
-  font-size: 16px;
-  line-height: 24px;
+a {
+  color: #FED416;
 }
 
-.type-heading-2 {
-  font-size: 20px;
-  line-height: 28px;
-}
-
-.type-heading-1 {
-  font-size: 24px;
-  line-height: 32px;
-}
-
-.type-display-3 {
-  font-size: 48px;
-  line-height: 56px;
-}
-
-.type-display-2 {
-  font-size: 64px;
-  line-height: 72px;
-}
-
-.type-display-1 {
-  font-size: 72px;
-  line-height: 80px;
+a:hover {
+  text-decoration: none;
 }
 
 /*
@@ -162,12 +140,27 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
  }
 
+ .site-name a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+ }
+
+ .site-name span {
+  display: block;
+ }
+
  .site-name-title {
+  margin-bottom: 8px;
+  font-size: 28px;
+  line-height: 36px;
   text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.25);
  }
 
 .site-name-subtitle {
   display: block;
+  font-size: 12px;
+  line-height: 20px;
 }
 
 .main-nav {
@@ -209,20 +202,136 @@ h1, h2, h3, h4, h5, h6 {
   margin: 48px 0;
 }
 
-.page-home .site-name-title {
-  font-size: 28px;
-  line-height: 36px;
-}
-
-.page-home .site-name-subtitle {
-  font-size: 12px;
-  line-height: 20px;
-}
-
 .page-home .avatar {
   width: 100%;
 }
 
+/*
+ * Internal pages
+ */
+
+ /* Header */
+
+.page-internal .header {
+  padding-top: 16px;
+  text-align: center;
+}
+
+/* Menu */
+
+.page-internal .site-name,
+.page-internal .main-nav-list {
+  display: none;
+}
+
+.page-internal .main-nav-list {
+  padding: 32px 0 4px;
+}
+
+.main-nav--open .main-nav-list {
+  display: block;
+}
+
+.page-internal .main-nav {
+  margin: 0;
+}
+
+.menu-toggle {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
+.menu-toggle-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url(../img/icon-menu-hamburger.svg) no-repeat;
+}
+
+.main-nav--open .menu-toggle-icon {
+  background: url(../img/icon-menu-close.svg) no-repeat;
+}
+
+/* Avatar */
+
+.avatar-link {
+  display: block;
+  margin: 16px auto 0;
+  width: 120px;
+}
+
+.page-internal .avatar {
+width: 120px;
+}
+
+/* Main content */
+
+.main {
+  position: relative;
+  background: #5800AF url(../img/synth-sunset-mobile.svg) center bottom no-repeat;
+  padding: 56px 24px 84px;
+}
+
+.page-title {
+  margin: -74px 0 48px;
+  font-size: 28px;
+  line-height: 36px;
+  text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.heading-1 {
+  display: inline-block;
+  margin-bottom: 32px;
+  padding: 8px;
+  background: #FF2776;
+  font-size: 24px;
+  line-height: 32px;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.heading-2 {
+  margin-bottom: 16px;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.main p,
+.main ul {
+  margin-bottom: 32px;
+}
+
+/* Jump menu */
+.jump-menu {
+  padding-left: 24px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.jump-menu li {
+  margin-bottom: 16px;
+}
+
+/* Content */
+
+.content {
+  margin: 72px 0;
+}
+
+.content-no-top-margin {
+  margin-top: 0;
+}
+
+.experience-meta {
+  margin-bottom: 32px;
+}
+
+.experience-meta span {
+  display: block;
+}
 
 
 
@@ -315,7 +424,12 @@ h1, h2, h3, h4, h5, h6 {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 1100px) {
+
+  body {
+    font-size: 18px;
+    line-height: 26px;
+  }
 
   .page-home,
   .page-home .header {
@@ -323,20 +437,28 @@ h1, h2, h3, h4, h5, h6 {
     min-height: 800px;
   }
 
-  body {
-    font-size: 18px;
-    line-height: 26px;
+  .page-home .header,
+  .wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
   }
 
-  .page-home {
+  .main-nav {
+    position: relative;
+    z-index: 1;
+  }
+
+  /*
+   * Home
+   */
+
+ .page-home {
     text-align: left;
     overflow: hidden;
   }
 
-  .page-home .header {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 48px;
+ .page-home .header {
+  padding: 0 48px;
   }
 
   .page-home .site-name-title {
@@ -349,12 +471,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 24px;
   }
 
-  .main-nav {
-    position: relative;
-    z-index: 1;
-  }
-
-  .main-nav li {
+  .page-home .main-nav li {
     font-size: 48px;
     line-height: 56px;
   }
@@ -366,6 +483,132 @@ h1, h2, h3, h4, h5, h6 {
     bottom: 0;
     width: 600px;
   }
+
+  /*
+   * Internal pages
+   */
+
+   .wrapper {
+    padding: 0 48px;
+   }
+
+  .page-internal .header {
+    box-sizing: border-box;
+    position: fixed;
+    float: left;
+    width: 25%;
+    padding: 360px 0;
+    background: none;
+  }
+
+  .main {
+    box-sizing: border-box;
+    float: right;
+    width: 70%;
+    margin-top: 360px;
+    background-image: none;
+  }
+
+  .page-internal .site-name,
+  .page-internal .main-nav-list {
+    display: block;
+  }
+
+  .page-internal .site-name {
+    z-index: 1;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+  }
+
+  .page-internal .site-name-title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .page-internal .site-name-subtitle {
+    font-size: 10px;
+    line-height: 18px;
+  }
+
+  .page-internal .main-nav-list {
+    padding: 0;
+  }
+
+  .page-internal .main-nav li {
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .page-internal .main-nav a {
+    display: block;
+    padding: 16px 0;
+    border: 1px solid #fff;
+  }
+
+  .page-internal .main-nav a:hover {
+    border-color: #3D0079;
+    color: #3D0079;
+    text-decoration: none;
+  }
+
+  .page-internal .selected a {
+    background: #5800AF;
+    border-color: #3D0079;
+  }
+
+  .page-internal .selected a:hover {
+    color: #fff;
+  }
+
+   .menu-toggle {
+    display: none;
+   }
+
+   .page-internal .avatar-link {
+    position: absolute;
+    top: 102px;
+    left: 50%;
+    margin-left: -100px;
+   }
+   
+   .page-internal .avatar {
+    width: 200px;
+   }
+
+   /* Main content */
+   .main {
+    padding: 0 48px;
+   }
+
+   .page-title {
+    margin: -80px 0 84px;
+    min-width: 327px;
+    min-height: 81px;
+    background: url(../img/synth-sunset-desktop.svg) center bottom no-repeat;
+    font-size: 32px;
+    line-height: 40px;
+   }
+
+   .heading-1 {
+    font-size: 32px;
+    line-height: 40px;
+    }
+
+  .heading-2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+   .jump-menu {
+    font-size: 16px;
+    line-height: 24px;
+   }
+
+   .content {
+    margin: 84px 0;
+   }
 }
 
 @media print,
