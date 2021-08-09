@@ -270,6 +270,13 @@ width: 120px;
   text-align: center;
 }
 
+.heading-1,
+.heading-2,
+.heading-3 {
+  font-family: 'Press Start 2P', cursive;
+  text-transform: uppercase;
+}
+
 .heading-1 {
   display: inline-block;
   margin-bottom: 32px;
