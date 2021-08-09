@@ -337,6 +337,70 @@ width: 120px;
   display: block;
 }
 
+/* Image gallery */
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  margin: 0 0 2em;
+  padding: 0;
+  list-style: none;
+}
+
+.gallery li {
+  box-sizing: border-box;
+  padding: 8px;
+  width: 50%;
+  cursor: pointer;
+}
+
+.gallery img {
+  max-width: 100%;
+  box-shadow: 5px 5px 0 #FED416;
+}
+
+.gallery li:hover img {
+  box-shadow: 5px 5px 0 #FF2776;
+}
+
+/* Image modal */
+
+@keyframes fadeIn {
+  from  {opacity: 0;}
+  to  {opacity: 1;}
+}
+
+.modal {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  overflow: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 0 1em;
+  background: rgba(0, 0, 0, 0.8);
+  animation: 500ms fadeIn;
+}
+
+.modal .wrapper {
+  position: relative;
+  align-items: center;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 30px;
+  padding: 1em;
+  background: #fff;
+}
+
+.modal .wrapper img {
+  max-width: 100%;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -424,6 +488,12 @@ width: 120px;
     These examples override the primary ('mobile first') styles.
     Modify as content requires.
     ========================================================================== */
+
+@media only screen and (min-width: 600px) {
+  .gallery li {
+    width: 33.333%;
+  }
+}
 
 @media only screen and (min-width: 1100px) {
 
@@ -600,6 +670,10 @@ width: 120px;
    .content {
     margin: 84px 0;
    }
+
+   .gallery li {
+      width: 25%;
+    }
 }
 
 @media print,
