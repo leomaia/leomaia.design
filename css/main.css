@@ -421,7 +421,7 @@ width: 120px;
   animation: 500ms fadeIn;
 }
 
-.modal .wrapper {
+.modal-content {
   position: relative;
   align-items: center;
   max-width: 800px;
@@ -431,7 +431,7 @@ width: 120px;
   background: #fff;
 }
 
-.modal .wrapper img {
+.modal-content img {
   max-width: 100%;
 }
 
