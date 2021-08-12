@@ -372,6 +372,32 @@ width: 120px;
   box-shadow: 5px 5px 0 #FF2776;
 }
 
+/* Gallery aspect ratio fix */
+
+/* Position child elements relative to this element */
+.aspect-ratio-box {
+  position: relative;
+  display: block;
+}
+
+/* Create a pseudo element that uses padding-bottom to take up space */
+.aspect-ratio-box::after {
+  display: block;
+  content: "";
+  padding-bottom: 100%; /* 16:9 aspect ratio = 56.25% */
+}
+
+/* Image is positioned absolutely relative to the parent element */
+.aspect-ratio-box img {
+  /* Image should match parent box size */
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* Image modal */
 
 @keyframes fadeIn {
