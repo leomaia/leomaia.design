@@ -596,21 +596,18 @@ width: 120px;
     padding: 0 48px;
    }
 
+   .wrapper-inner {
+    position: relative;
+    padding: 360px 0 0 332px;
+   }
+
   .page-internal .header {
     box-sizing: border-box;
     position: fixed;
-    float: left;
-    width: 25%;
-    padding: 360px 0;
+    width: 300px;
+    margin-left: -332px;
+    padding: 0;
     background: none;
-  }
-
-  .main {
-    box-sizing: border-box;
-    float: right;
-    width: 70%;
-    margin-top: 360px;
-    background-image: none;
   }
 
   .page-internal .site-name,
@@ -621,7 +618,7 @@ width: 120px;
   .page-internal .site-name {
     z-index: 1;
     position: absolute;
-    top: 60px;
+    top: -300px;
     width: 100%;
   }
 
@@ -672,8 +669,9 @@ width: 120px;
 
    .page-internal .avatar-link {
     position: absolute;
-    top: 86px;
+    top: 0;
     left: 50%;
+    margin-top: -257px;
     margin-left: -100px;
    }
    
@@ -683,12 +681,14 @@ width: 120px;
 
    /* Main content */
    .main {
-    padding: 0 48px;
+    padding: 84px 48px 16px;
+    background-image: none;
    }
 
    .page-title {
-    margin: -80px 0 84px;
-    min-width: 327px;
+    position: absolute;
+    margin: -164px 0 0 -48px;
+    width: 100%;
     min-height: 81px;
     background: url(../img/synth-sunset-desktop.svg) center bottom no-repeat;
     font-size: 32px;
