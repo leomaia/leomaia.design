@@ -556,9 +556,9 @@ width: 120px;
   }
 
  .page-home .header {
-  position: static;
-  margin: 0 auto;
-  padding: 0 48px;
+    position: static;
+    margin: 0 auto;
+    padding: 0 48px;
   }
 
   .page-home .site-name {
