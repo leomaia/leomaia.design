@@ -1,4 +1,15 @@
 //
+// Toggle class when opening mobile menu (changing icon)
+//
+
+var el = document.querySelector('.menu-toggle');
+
+el.onclick = function() {
+  el.classList.toggle('menu-toggle--open');
+}
+
+
+//
 // Load images in a modal
 //
 

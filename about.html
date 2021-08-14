@@ -38,9 +38,10 @@
         </h1>
 
         <nav class="main-nav">
-          <div href="#" class="menu-toggle" aria-label="Open main menu">
-              <span class="menu-toggle-icon" aria-hidden="true"></span>
-          </div>
+          <label class="menu-toggle" for="toggle-mobile-menu" aria-label="Menu">
+            <span class="sr-only">Toggle menu</span>
+          </label>
+          <input id="toggle-mobile-menu" type="checkbox" />
 
           <ul class="main-nav-list">
             <li class="selected">
@@ -153,5 +154,8 @@
       </main><!-- /.main -->
     </div><!-- /.wrapper-inner -->
   </div><!-- /.wrapper -->
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
 </body>
 </html>
