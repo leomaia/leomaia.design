@@ -379,6 +379,7 @@ width: 120px;
 .gallery img {
   max-width: 100%;
   box-shadow: 5px 5px 0 #FED416;
+  background: rgba(0,0,0,0.2);
 }
 
 .gallery li:hover img {
