@@ -357,6 +357,17 @@ width: 120px;
   display: block;
 }
 
+/* Design work screenshots */
+
+.project-screenshot {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.project-screenshot img {
+  max-width: 100%;
+}
+
 /* Image gallery */
 
 .gallery {
