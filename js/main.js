@@ -17,7 +17,7 @@ el.onclick = function() {
 const body = document.querySelector(`body`);
 
 // Store all images we plan to show in a Modal
-const modalImages = document.querySelectorAll(`.gallery li img`);
+const modalImages = document.querySelectorAll(`.is-resizable`);
 
 // Store modal element
 const modal = document.querySelector(`.modal`);

@@ -359,6 +359,10 @@ width: 120px;
 
 /* Design work screenshots */
 
+.is-resizable {
+  cursor: pointer;
+}
+
 .project-screenshot {
   margin-top: 32px;
   margin-bottom: 32px;
@@ -384,7 +388,6 @@ width: 120px;
   box-sizing: border-box;
   padding: 8px;
   width: 50%;
-  cursor: pointer;
 }
 
 .gallery img {
