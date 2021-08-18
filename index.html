@@ -7,86 +7,68 @@
   <meta name="description" content="Personal website of Designer Leo Maia">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Open Graph protocol: https://ogp.me -->
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
+  <!-- App styles -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
-  <!--[if IE]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
+<body class="page-home">
 
-  <div class="wrapper">
-    <header class="header">
-      <h1>
-        <img src="img/avatar-pixelart.png" alt="Leo Maia - UX Designer and Illustrator" class="avatar">
-        <span class="intro">
-          Hi! I’m <strong>Leo Maia</strong>, a UX and Product Designer from Rio de Janeiro living in Amsterdam and working for Booking.com since 2014. Check out <a href="cv/Leonardo_Maia_CV_2021.pdf" target="blank">my resume</a> or my <a href="https://www.linkedin.com/in/leomaia/">Linkedin profile</a>.
+  <header class="header">
+    <h1 class="site-name">
+        <span class="site-name-title">
+          Leo_Maia
         </span>
-      </h1>
-    </header><!-- /.header -->
-    
-    <main class="main">
-      <a name="contact"></a>
-      <section class="content-chunk contact">
-          <h2>
-            Contact and links
-          </h2>
-          
-          <dl>
-            <dt>Email</dt>
-            <dd>
-              <a href="mailto:oleomaia@gmail.com">oleomaia@gmail.com</a>
-            </dd>
-            <dt>
-              Career
-            </dt>
-            <dd>
-              <a href="cv/Leonardo_Maia_CV_2021.pdf" target="blank">
-                Resume
-              </a>
-            </dd>
-            <dd>
-              <a href="https://www.linkedin.com/in/leomaia/">
-                Linkedin
-              </a>
-            </dd>
-            <dt>
-              Illustration
-            </dt>
-            <dd>
-              <a href="http://leomaiadraws.me">
-                leomaiadraws.me
-              </a>
-            </dd>
-            <dd>
-              <a href="https://dribbble.com/leomaia">
-                Dribbble
-              </a>
-            </dd>
-            <dd>
-              <a href="https://www.behance.net/leomaia">
-                Behance
-              </a>
-            </dd>
-            <dt>
-              Music
-            </dt>
-            <dd>
-              <a href="https://soundcloud.com/leo-maia-sounds">
-                Soundcloud</a>
-            </dd>
-          </dl>
-        </section><!-- /.contact -->
-    </main><!-- /.main -->
-  </div><!-- /.wrapper -->
+        <span class="site-name-subtitle">
+          UX designer &amp; illustrator
+        </span>
+    </h1>
 
+    <nav class="main-nav">
+      <ul class="main-nav-list">
+        <li>
+          <a href="about.html">
+            About me
+          </a>
+        </li>
+        <li>
+          <a href="design.html">
+            Design
+          </a>
+        </li>
+        <li>
+          <a href="illustration.html">
+            Illustration
+          </a>
+        </li>
+        <li>
+          <a href="contact.html">
+            Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <img src="img/avatar.svg" alt="Leo Maia avatar" class="avatar">
+  </header><!-- /.header -->
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
