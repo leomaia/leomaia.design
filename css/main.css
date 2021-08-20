@@ -368,8 +368,7 @@ width: 120px;
 }
 
 .project-screenshot {
-  margin-top: 32px;
-  margin-bottom: 32px;
+  margin: 32px 0;
 }
 
 .project-screenshot img {
