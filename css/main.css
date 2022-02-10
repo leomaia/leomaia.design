@@ -177,14 +177,18 @@ a:hover {
   display: block;
 }
 
+.link-title {
+  margin-bottom: 0.2em;
+}
+
 .link-caption {
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 
 .links a,
 .links .no-link {
   display: block;
-  padding: 0.8em 0.4em;
+  padding: 1em 0.4em;
   border: 1px solid #fff;
   color: #fff;
   text-decoration: none;
