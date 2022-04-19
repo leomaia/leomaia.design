@@ -204,7 +204,7 @@ a:hover {
 
 .links a:hover {
   border-color: #8E1EFE;
-  background: rgba(255, 255, 255, 0.85);
+  background: #fff;
   color: #8E1EFE;
 }
 
