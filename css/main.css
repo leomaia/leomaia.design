@@ -202,12 +202,12 @@ a:hover {
   border: 1px solid #8E1EFE;
   color: #8E1EFE;
   text-decoration: none;
-  transition: linear 0.4s;
+  transition: linear 0.25s;
   box-shadow: 6px 6px 0 rgba(142, 30, 254, 0.3);
 }
 
 .links a:hover {
-  box-shadow: 6px 6px 0 rgba(61, 0, 121, 0.6);
+  box-shadow: 8px 8px 0 rgba(61, 0, 121, 0.5);
   color: #3D0079;
 }
 
