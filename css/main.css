@@ -163,6 +163,8 @@ a:hover {
   margin: 4em 0;
   text-align: left;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+  font-size: 1.2em;
+  line-height: 1.6em;
 }
 
 .links dt {
