@@ -168,7 +168,7 @@ a:hover {
 }
 
 .links {
-  margin: 0;
+  margin: 0 0 4em 0;
   padding: 0;
   list-style: none;
 }
@@ -210,10 +210,6 @@ a:hover {
 .links .no-link {
   opacity: 0.25;
   cursor: not-allowed;
-}
-
-.synthwave-sunset {
-  margin-top: 2em;
 }
 
 
@@ -305,7 +301,15 @@ a:hover {
     Modify as content requires.
     ========================================================================== */
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-height: 1000px) {
+
+  .synthwave-sunset {
+    position: absolute;
+    top: 100vh;
+    left: 50%;
+    margin-top: -81px;
+    margin-left: -163px;
+  }
   
 }
 
