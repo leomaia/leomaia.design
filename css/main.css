@@ -167,14 +167,18 @@ a:hover {
   line-height: 1.6em;
 }
 
-.links {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.links dt {
+  margin-bottom: 0.6em;
+  font-size: 0.8em;
 }
 
-.links li {
-  margin-bottom: 0.6em;
+.links .spacer {
+  margin-top: 3em;
+}
+
+.links dd {
+  margin: 0 0 0.8em;
+  padding: 0;
 }
 
 .link-title,
