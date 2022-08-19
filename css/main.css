@@ -315,6 +315,10 @@ a:hover {
 
 @media only screen and (min-width: 1000px) {
 
+  body, .half {
+      min-height: 100vh;
+    }
+
   .main-content {
     display: flex;
     gap:  0;
