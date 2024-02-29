@@ -118,7 +118,23 @@ a:hover {
 
 .wrapper {
   margin: 0 auto;
+  padding: 0 4em 4em;
   text-align: center;
+  background: #FED417;
+  background: -webkit-linear-gradient(bottom, #FED417, #F322FF);
+  background: -moz-linear-gradient(bottom, #FED417, #F322FF);
+  background: linear-gradient(to top, #FED417, #F322FF);
+}
+
+.header,
+.main-content {
+  margin: 0 auto;
+}
+
+.site-name span,
+.subtitle,
+.link-title {
+  text-shadow: 4px 4px rgba(0, 0, 0, 0.2);
 }
 
 /*
@@ -126,9 +142,7 @@ a:hover {
  */
 
 .header {
-  position: absolute;
-  width: 100%;
-  top: 4em;
+  padding: 4em 0;
 }
 
 .avatar {
@@ -146,40 +160,30 @@ a:hover {
   width: 3.8em;
 }
 
-.site-name-title,
-.half-title {
-  text-shadow: 4px 4px rgba(0, 0, 0, 0.2);
+.site-name span {
+  display: block;
+}
+
+.site-name-title {
+  margin-bottom: 0.6em;
+  font-size: 1.4em;
+}
+
+.site-name-subtitle {
+  font-size: 0.8em;
 }
 
 /*
  * Main content
  */
 
-.half {
-  padding: 2em;
+.content {
   text-align: left;
 }
 
-.design {
-  padding-top: 24em;
-  background: #222;
-}
-
-.half-title {
-  font-size: 2.4em;
-  line-height: 1;
-  word-break: break-word;
-}
-
-.illustration {
-  background: #FED417;
-  background: -webkit-linear-gradient(bottom, #FED417, #F322FF);
-  background: -moz-linear-gradient(bottom, #FED417, #F322FF);
-  background: linear-gradient(to top, #FED417, #F322FF);
-}
 
 .intro {
-  margin: 0 0 4em;
+  margin: 0 0 2em;
   text-align: left;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
   font-size: 1.4em;
@@ -187,7 +191,7 @@ a:hover {
 }
 
 .links {
-  margin: 0;
+  margin: 4em 0;
   padding: 0;
 }
 
@@ -199,6 +203,8 @@ a:hover {
 }
 
 .links li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
   border: none;
 }
 
@@ -216,12 +222,12 @@ a:hover {
 }
 
 .link-title {
-  margin-bottom: 0.2em;
+  margin-bottom: 0.4em;
   font-size: 1.4em;
 }
 
 .link-caption {
-  font-size: 1em;;
+  font-size: 1.2em;
 }
 
 
@@ -315,37 +321,14 @@ a:hover {
 
 @media only screen and (min-width: 1000px) {
 
-  body, .half {
+  body {
       min-height: 100vh;
     }
 
-  .main-content {
-    display: flex;
-    gap:  0;
-    align-items: stretch;
-  }
-
-  .half {
-    width: 50%;
-    padding: 24em 6em 6em;
-    box-sizing: border-box;
-  }
-
-  .half-title {
-    font-size: 2.6em;
-  }
-
-  @media only screen and (min-width: 1700px) {
-    .half {
-        padding-left: 8em;
-        padding-right: 8em;
-      }
-
-
-    .half-title {
-      font-size: 3.2em;
+    .header,
+    .main-content {
+      max-width: 46em;
     }
-  }
   
 }
 
