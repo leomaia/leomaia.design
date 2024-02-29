@@ -162,6 +162,7 @@ a:hover {
 
 .site-name span {
   display: block;
+  line-height: 1em;
 }
 
 .site-name-title {
