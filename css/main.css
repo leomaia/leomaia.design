@@ -125,7 +125,7 @@ a:hover {
 
 .wrapper {
   margin: 0 auto;
-  padding: 0 4em 4em;
+  padding: 0 2em 2em;
   text-align: center;
   background: #FED417;
   background: -webkit-linear-gradient(bottom, #FED417, #F322FF);
@@ -319,7 +319,7 @@ a:hover {
     Modify as content requires.
     ========================================================================== */
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 800px) {
 
   body {
       min-height: 100vh;
