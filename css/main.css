@@ -325,9 +325,8 @@ a:hover {
       min-height: 100vh;
     }
 
-    .header,
     .main-content {
-      max-width: 40em;
+      max-width: 36em;
     }
   
 }
